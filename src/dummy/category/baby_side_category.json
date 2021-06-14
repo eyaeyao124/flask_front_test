@@ -1,0 +1,15 @@
+[
+    {
+        "category":"top",
+        "menu_name":"상의"
+    },
+    {
+        "category":"bottom",
+        "menu_name":"하의"
+    },
+    {
+        "category":"hats",
+        "menu_name":"모자"
+    }
+
+]

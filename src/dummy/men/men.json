@@ -1,0 +1,57 @@
+[
+    {
+        "id":1,
+        "price": 15000,
+        "title": "상의1",
+        "description": "보통상의",
+        "categoty":"남성",
+        "categoty2":"상의",
+        "image":"",
+        "date":"2021-06-11",
+        "rate":"4"
+    },
+    {
+        "id":2,
+        "price": 13000,
+        "title": "하의2",
+        "description": "보통하의",
+        "categoty":"남성",
+        "categoty2":"하의",
+        "image":"",
+        "date":"2021-06-10",
+        "rate":"1"
+    },
+    {
+        "id":3,
+        "price": 1000,
+        "title": "양말1",
+        "description": "보통양말",
+        "categoty":"남성",
+        "categoty2":"양말",
+        "image":"",
+        "date":"2021-01-11",
+        "rate":"2.5"
+    },
+    {
+        "id":4,
+        "price": 166000,
+        "title": "상의2",
+        "description": "보통상의2",
+        "categoty":"남성",
+        "categoty2":"상의",
+        "image":"",
+        "date":"2020-06-11",
+        "rate":"3"
+    },
+    {
+        "id":5,
+        "price": 15000,
+        "title": "상의3",
+        "description": "보통상의3",
+        "categoty":"남성",
+        "categoty2":"상의",
+        "image":"",
+        "date":"2000-06-11",
+        "rate":"3"
+    }
+]

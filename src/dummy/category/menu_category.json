@@ -1,0 +1,15 @@
+[
+    {
+        "category":"men",
+        "menu_name":"남성"
+    },
+    {
+        "category":"women",
+        "menu_name":"여성"
+    },
+    {
+        "category":"baby",
+        "menu_name":"유아"
+    }
+
+]

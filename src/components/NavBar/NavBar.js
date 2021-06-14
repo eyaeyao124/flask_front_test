@@ -1,12 +1,14 @@
 import React from 'react';
-import Menu from "./Sections/Menu";
+import {CATEGORYS} from '../Config';
 
 const NavBar = () => {
     return (
         <div>
             <div>메뉴 아이콘</div>
-            <Menu />
-            <div>장바구니</div>
+            <div>
+                {CATEGORYS.map((item,index)=>{return <a href={`/category/${item}`} key={index}>{item}</a>})}
+            </div>
+            <div><a href={`/cart`}>장바구니</a></div>
         </div>
     )
 }

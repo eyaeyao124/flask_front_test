@@ -1,9 +1,10 @@
 import React from 'react';
+import {CATEGORYS} from '../Config';
 
 const LandingPage = () => {
     return (
         <div>
-            this is landing page
+            {CATEGORYS.map((item,index)=>{return <div><a href={`/category/${item}`} key={index}>{item}</a></div>})}
         </div>
     )
 }

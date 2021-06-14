@@ -5,9 +5,9 @@ function Footer() {
         <div style={{
             height: '80px', display: 'flex',
             flexDirection: 'column', alignItems: 'center',
-            justifyContent: 'center', fontSize:'1rem'
+            justifyContent: 'center', fontSize:'1rem', backgroundColor:'#eee'
         }}>
-           <p> Happy Coding</p>
+           <p> FLASK FRONT WEB TEST</p>
         </div>
     )
 }

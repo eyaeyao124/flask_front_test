@@ -13,6 +13,8 @@ function App() {
       <div style={{ paddingTop: '69px', minHeight: 'calc(100vh - 80px)' }}>
         <Switch>
           <Route exact path="/" component={LandingPage} />
+          <Route exact path="/categoty/:item" component={LandingPage} />
+          <Route exact path="/cart" component={LandingPage} />
         </Switch>
       </div>
       <Footer />

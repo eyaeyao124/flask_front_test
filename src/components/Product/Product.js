@@ -2,7 +2,7 @@ import React from 'react';
 import Category from './Category/Category';
 import ProductList from './Category/ProductList';
 
-const product = ({match}) => {
+const Product = ({match}) => {
 
     return (
         <div>
@@ -18,4 +18,4 @@ const product = ({match}) => {
     )
 }
 
-export default product
+export default Product

@@ -4,7 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import LandingPage from "./LandingPage/LandingPage"
 import NavBar from "./NavBar/NavBar"
 import Footer from "./Footer/Footer"
-import product from './Product/Product';
+import Product from './Product/Product';
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <div style={{ paddingTop: '69px', minHeight: 'calc(100vh - 80px)' }}>
         <Switch>
           <Route exact path="/" component={LandingPage} />
-          <Route exact path="/category/:item" component={product} />
+          <Route exact path="/category/:item" component={Product} />
           <Route exact path="/cart" component={LandingPage} />
         </Switch>
       </div>

@@ -1,0 +1,1 @@
+export const SELECT_PRODUCT_CATEGORY = 'select_product_category';

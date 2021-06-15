@@ -4,7 +4,7 @@ import category from '../../dummy/category/menu_category.json';
 const NavBar = () => {
     return (
         <div>
-            <div>메뉴 아이콘</div>
+            <div><a href='/'>메뉴 아이콘</a></div>
             <div>
                 {category.map((item,index)=>{return <a href={`/category/${item.category}`} key={index}>{item.menu_name}</a>})}
             </div>

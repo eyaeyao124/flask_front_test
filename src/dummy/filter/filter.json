@@ -1,0 +1,26 @@
+[
+    {
+        "id":0,
+        "value":"latest",
+        "name":"최신순",
+        "default":true
+    },
+    {
+        "id":1,
+        "value":"highPrice",
+        "name":"높은가격",
+        "default":false
+    },
+    {
+        "id":2,
+        "value":"lowPrice",
+        "name":"낮은가격",
+        "default":false
+    },
+    {
+        "id":3,
+        "value":"rate",
+        "name":"평점순",
+        "default":false
+    }
+]

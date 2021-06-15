@@ -1,14 +1,26 @@
-import React,{useEffect,useState, useCallback} from 'react'
+import React,{useEffect,useState} from 'react'
 import { useSelector } from "react-redux";
+import Filter from './Filter';
 
 const ProductList = ({categorys}) => {
     const category = useSelector(state => state.productCategory);
-    const filter = useSelector(state => state.productFilter);
 
     const [BasicList, setBasicList] = useState([]);
     const [List, setList] = useState([]);
 
-    const selectList = useCallback(() => {
+    const selectFilter = (name) => {
+        if(name === "lowPrice") {
+            setList([...List].sort((a,b)=>{return a.price-b.price }))
+        }else if(name === "highPrice") {
+            setList([...List].sort((a,b)=>{return b.price-a.price }))
+        }else if(name === "rate") {
+            setList([...List].sort((a,b)=>{return (b.rate < a.rate)? -1 : (a.rate === b.rate)? 0 : 1}))  
+        }else{
+            setList([...List].sort((a,b)=>{return (b.date > a.date)?-1 : ((a.date === b.date)? 0 : 1)}))
+        }
+    }
+
+    const selectList = () => {
         if(Object.keys(category).length !== 0){
             setList(BasicList.filter(item => item.categoty2.includes(category.selectCategory)))
         }else{
@@ -16,41 +28,23 @@ const ProductList = ({categorys}) => {
             setList(lists);
             setBasicList(lists);
         }
-    })
-
-    const selectFilter = useCallback(() => {
-        // if(filter.selectFilter === "highPrice") {
-        //     setList(List.sort((a,b)=>{return a.price-b.price }))
-        // }else if(filter.selectFilter === "lowPrice") {
-        //     setList(List.sort((a,b)=>{return b.price-a.price }))
-        // }else if(filter.selectFilter === "rate") {
-        //     setList(List.sort((a,b)=>{if(b.rate > a.rate) return -1 }))  
-        // }else{
-        //     setList(List.sort((a,b)=>{if(b.date > a.date) return -1 }))
-        // }
-        if(filter.selectFilter === "highPrice") {
-            console.log(List)
-            setList(List.sort((a,b)=>{return a.price-b.price }))
-        }else if(filter.selectFilter === "lowPrice") {
-            setList(List.sort((a,b)=>{return b.price-a.price }))
-        }
-    })
+    }
 
     useEffect(() => {
         selectList()
-        selectFilter()
-    }, [category, filter])
+    }, [category])
     
     return (
         <div>
+            <Filter filterFunc={selectFilter}/>
            {
-            List.map((item)=>{
-                return <div key={item.id}>
-                    <div>{item.image}</div>
-                    <div>{item.title}</div>
-                    <div>{item.price}</div>
-                    <div>{item.rate}</div>
-                </div>
+            List && List.map((item,index)=>{
+                return <div key={index}>
+                        <div>{item.image}</div>
+                        <div>{item.title}</div>
+                        <div>{item.price}</div>
+                        <div>{item.rate}</div>
+                    </div>
             })
            } 
         </div>

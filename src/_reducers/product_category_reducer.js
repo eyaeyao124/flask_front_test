@@ -1,6 +1,6 @@
 import {SELECT_PRODUCT_CATEGORY} from '../_actions/types';
 
-export default function(state={},action){
+function categoryReducer(state={},action){
     switch(action.type){
         case SELECT_PRODUCT_CATEGORY:
             return {...state, selectCategory: action.payload }
@@ -8,3 +8,5 @@ export default function(state={},action){
             return state;
     }
 }
+
+export default categoryReducer;

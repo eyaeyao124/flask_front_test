@@ -5,6 +5,8 @@ import LandingPage from "./LandingPage/LandingPage"
 import NavBar from "./NavBar/NavBar"
 import Footer from "./Footer/Footer"
 import Product from './Product/Product';
+import Cart from './Cart/Cart'
+import Detail from './Detail/Detail'
 
 
 function App() {
@@ -15,7 +17,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/category/:item" component={Product} />
-          <Route exact path="/cart" component={LandingPage} />
+          <Route exact path="/detail/:category/:id" component={Detail} />
+          <Route exact path="/cart" component={Cart} />
         </Switch>
       </div>
       <Footer />

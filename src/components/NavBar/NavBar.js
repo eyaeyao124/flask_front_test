@@ -1,15 +1,18 @@
 import React from 'react';
 import category from '../../dummy/category/menu_category.json';
+import { Layout, Menu } from 'antd';
+import 'antd/dist/antd.css';
+const { Header} = Layout;
 
 const NavBar = () => {
     return (
-        <div>
-            <div><a href='/'>메뉴 아이콘</a></div>
-            <div>
-                {category.map((item,index)=>{return <a href={`/category/${item.category}`} key={index}>{item.menu_name}</a>})}
-            </div>
-            <div><a href={`/cart`}>장바구니</a></div>
-        </div>
+            <Header style={{ position: "fixed", zIndex: 1, width: "100%", backgroundColor:"#fff" }}>
+                <Menu theme="light" mode="horizontal">
+                    <Menu.Item key="999"><a href='/'>메뉴 아이콘</a></Menu.Item>
+                    {category.map((item,index)=>{return <Menu.Item key={index}><a href={`/category/${item.category}`}>{item.menu_name}</a></Menu.Item>})}
+                    <Menu.Item key="998"><a href={`/cart`}>장바구니</a></Menu.Item>
+                </Menu>
+            </Header>
     )
 }
 

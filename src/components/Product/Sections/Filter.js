@@ -10,13 +10,11 @@ const Filter = ({filterFunc}) => {
 
     return (
         <div>
-            <form>
             {
                 CheckList.map((item,index)=>{
                     return <label key={index}>{item.name}<input type="radio" name="filter" value={item.value} defaultChecked={item.default === true ? true : false} onChange={(e)=>filterFunc(e.target.value)}/></label>
                 })
             }
-            </form>
         </div>
     )
 }

@@ -2,6 +2,7 @@ import React,{useEffect,useState} from 'react';
 import { useHistory } from "react-router-dom";
 import { Button, Image, Row, Col } from 'antd';
 import { MinusOutlined, PlusOutlined } from '@ant-design/icons';
+import './Detail.css';
 
 const Detail = ({match}) => {
     const history = useHistory();
@@ -55,32 +56,33 @@ const Detail = ({match}) => {
     }, [])
 
     return (
-        <div>
+        <div className="detail-wrapper">
             {
                 Item && Item.map((item, index)=>{
-                    return  <Row gutter={[16, 16]} key={index}>
-                                <Col xl={6} lg={6} md={12} xs={24}>
+                    return  <Row gutter={[16, 16]} key={index} justify="center">
+                                <Col xl={6} lg={8} md={12} xs={24}>
                                     <Image
                                         width='100%'
                                         src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
                                         />
                                 </Col>
-                                <Col xl={6} lg={6} md={12} xs={24}>
-                                    <div>{item.rate}</div>
-                                    <div>{item.title}</div>
-                                    <div>{item.description}</div>
-                                    <div>{item.price}</div>
-                                    <div>{item.date}</div>
-
-                                    <Button.Group>
+                                <Col xl={6} lg={8} md={12} xs={24}>
+                                    <div className="detail-title"><span>{item.title}</span> <span>평점: {item.rate}</span></div>
+                                    <div className="detail-desc"><span>설명</span> {item.description}</div>
+                                    <div className="detail-desc"><span>정가</span> {item.price}</div>
+                                    <div className="detail-desc"><span>등록일</span> {item.date}</div>
+                                    <div className="count-wrapper">
+                                    <span>수량</span>
+                                    <Button.Group className="count-btn-wrapper">
                                         <Button onClick={productDecrease} icon={<MinusOutlined />} />
+                                        <span>{Count}</span>
                                         <Button onClick={productIncrease} icon={<PlusOutlined />} />
                                     </Button.Group>
-                                    <div>합계 <span>{Count}</span></div>
-                                    <div>금액 <span>{TotalPrice}</span></div>
-                                    <div>
-                                    <Button onClick={addCart}>장바구니</Button>
-                                    <Button type="primary">주문하기</Button>
+                                    </div>
+                                    <div className="price-wrapper"><span>금액</span> <span>{TotalPrice} 원</span></div>
+                                    <div className="submit-btn-wrapper">
+                                    <Button size="large" onClick={addCart}>장바구니</Button>
+                                    <Button size="large" type="primary">주문하기</Button>
                                     </div>
                                 </Col>
                             </Row>

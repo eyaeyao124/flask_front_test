@@ -1,0 +1,66 @@
+.detail-wrapper{
+    margin: 50px;
+}
+
+.detail-title{
+    padding: 10px;
+    border-bottom: 1px solid #aaa;
+}
+
+.detail-title span:first-child{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.detail-title span:last-child{
+    float: right;
+    vertical-align: middle;
+    padding-top: 5px;
+}
+
+.detail-desc{
+    margin: 10px;
+}
+
+.detail-desc > span {
+    width: 60px;
+    display: inline-block;
+    color: #aaa;
+}
+
+.count-wrapper{
+    padding: 20px 10px;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+.count-btn-wrapper{
+    float: right;
+    top: -5px;
+}
+
+.count-btn-wrapper > span{
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.price-wrapper{
+    padding: 30px 10px;
+    border-bottom: 1px solid #aaa;
+}
+
+.price-wrapper span:last-child{
+    float: right;
+    display: inline-block;
+    font-size: 25px;
+    position: relative;
+    top: -10px;
+    font-weight: bold;
+}
+
+.submit-btn-wrapper{
+    padding: 20px 10px;
+    text-align: right;
+}

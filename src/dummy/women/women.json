@@ -6,7 +6,7 @@
         "description": "보통상의",
         "categoty":"여성",
         "categoty2":"상의",
-        "image":"",
+        "image":"https://cdn.pixabay.com/photo/2016/07/11/15/43/woman-1509956_960_720.jpg",
         "date":"2021-06-11",
         "rate":"4"
     },
@@ -17,7 +17,7 @@
         "description": "보통하의",
         "categoty":"여성",
         "categoty2":"하의",
-        "image":"",
+        "image":"https://cdn.pixabay.com/photo/2015/07/02/10/18/jeans-828693_960_720.jpg",
         "date":"2021-06-10",
         "rate":"1"
     },
@@ -28,7 +28,7 @@
         "description": "보통주얼리",
         "categoty":"여성",
         "categoty2":"주얼리",
-        "image":"",
+        "image":"https://cdn.pixabay.com/photo/2017/06/16/03/13/ring-2407552_960_720.jpg",
         "date":"2021-01-11",
         "rate":"2.5"
     },
@@ -39,7 +39,7 @@
         "description": "보통상의2",
         "categoty":"여성",
         "categoty2":"상의",
-        "image":"",
+        "image":"https://cdn.pixabay.com/photo/2016/01/19/17/48/woman-1149911_960_720.jpg",
         "date":"2020-06-11",
         "rate":"3"
     },
@@ -50,7 +50,7 @@
         "description": "보통상의3",
         "categoty":"여성",
         "categoty2":"상의",
-        "image":"",
+        "image":"https://cdn.pixabay.com/photo/2016/06/29/04/39/bride-1486004_960_720.jpg",
         "date":"2000-06-11",
         "rate":"3"
     }

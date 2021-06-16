@@ -63,7 +63,8 @@ const Detail = ({match}) => {
                                 <Col xl={6} lg={8} md={12} xs={24}>
                                     <Image
                                         width='100%'
-                                        src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+                                        height="300px"
+                                        src={item.image}
                                         />
                                 </Col>
                                 <Col xl={6} lg={8} md={12} xs={24}>

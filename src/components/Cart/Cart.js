@@ -37,7 +37,8 @@ const Cart = () => {
                                     <Col xs={24} sm={24} md={8} lg={8} xl={4}>
                                         <Image
                                             width='100%'
-                                            src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+                                            height="300px"
+                                            src={item.image}
                                             />
                                     </Col>
                                     <Col xs={24} sm={24} md={8} lg={8} xl={10}>

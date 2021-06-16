@@ -6,7 +6,7 @@
         "description": "보통상의",
         "categoty":"남성",
         "categoty2":"상의",
-        "image":"",
+        "image":"https://cdn.pixabay.com/photo/2015/03/26/09/41/tie-690084_960_720.jpg",
         "date":"2021-06-11",
         "rate":"4"
     },
@@ -17,7 +17,7 @@
         "description": "보통하의",
         "categoty":"남성",
         "categoty2":"하의",
-        "image":"",
+        "image":"https://cdn.pixabay.com/photo/2015/06/19/09/39/lonely-814631_960_720.jpg",
         "date":"2021-06-10",
         "rate":"1"
     },
@@ -28,7 +28,7 @@
         "description": "보통양말",
         "categoty":"남성",
         "categoty2":"양말",
-        "image":"",
+        "image":"https://cdn.pixabay.com/photo/2016/12/14/11/34/socks-1906060_960_720.jpg",
         "date":"2021-01-11",
         "rate":"2.5"
     },
@@ -39,7 +39,7 @@
         "description": "보통상의2",
         "categoty":"남성",
         "categoty2":"상의",
-        "image":"",
+        "image":"https://cdn.pixabay.com/photo/2015/03/26/09/40/suit-690048_960_720.jpg",
         "date":"2020-06-11",
         "rate":"3"
     },
@@ -50,7 +50,7 @@
         "description": "보통상의3",
         "categoty":"남성",
         "categoty2":"상의",
-        "image":"",
+        "image":"https://cdn.pixabay.com/photo/2015/01/08/18/29/entrepreneur-593358_960_720.jpg",
         "date":"2000-06-11",
         "rate":"3"
     }

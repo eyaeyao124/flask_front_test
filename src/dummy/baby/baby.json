@@ -6,7 +6,7 @@
         "description": "보통상의",
         "categoty":"유아",
         "categoty2":"상의",
-        "image":"",
+        "image":"https://cdn.pixabay.com/photo/2016/03/07/09/34/kid-1241817_960_720.jpg",
         "date":"2021-06-11",
         "rate":"4"
     },
@@ -17,7 +17,7 @@
         "description": "보통하의",
         "categoty":"유아",
         "categoty2":"하의",
-        "image":"",
+        "image":"https://cdn.pixabay.com/photo/2015/04/30/06/47/boy-746520_960_720.jpg",
         "date":"2021-06-10",
         "rate":"1"
     },
@@ -28,7 +28,7 @@
         "description": "보통모자",
         "categoty":"유아",
         "categoty2":"모자",
-        "image":"",
+        "image":"https://cdn.pixabay.com/photo/2016/05/17/22/16/baby-1399332_960_720.jpg",
         "date":"2021-01-11",
         "rate":"2.5"
     },
@@ -39,7 +39,7 @@
         "description": "보통상의2",
         "categoty":"유아",
         "categoty2":"상의",
-        "image":"",
+        "image":"https://cdn.pixabay.com/photo/2017/07/18/18/01/little-girl-2516578_960_720.jpg",
         "date":"2020-06-11",
         "rate":"3"
     },
@@ -50,7 +50,7 @@
         "description": "보통상의3",
         "categoty":"유아",
         "categoty2":"상의",
-        "image":"",
+        "image":"https://cdn.pixabay.com/photo/2015/12/08/05/58/ice-skates-1082514_960_720.jpg",
         "date":"2000-06-11",
         "rate":"3"
     }

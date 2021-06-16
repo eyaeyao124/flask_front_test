@@ -46,10 +46,9 @@ const ProductList = ({categorys}) => {
                     return <Col key={index} xl={4} lg={6} md={8} xs={24}>
                                 <div style={{ position: 'relative' }} className="product-list-wrapper">
                                     <a href={`/detail/${categorys}/${item.id}`} >
-                                        <img style={{ width: '100%', height: '300px' }} src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" alt="products"/>
+                                        <img style={{ width: '100%', height: '300px' }} src={item.image} alt="products"/>
                                     </a>
                                     <div>
-                                        <div>{item.image}</div>
                                         <div className="product-title">{item.title}</div>
                                         <div className="product-price">{item.price} 원</div>
                                         <div className="product-rate">평점: {item.rate}</div>

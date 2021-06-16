@@ -1,0 +1,14 @@
+.site-card-wrapper {
+    margin: 50px 80px;
+}
+
+.card-div{
+    position: relative;
+    width: 100%;
+}
+
+.card-info{
+    text-align: center;
+    background-color: #eee;
+    padding: 20px;
+}

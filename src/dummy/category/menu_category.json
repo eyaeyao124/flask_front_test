@@ -1,15 +1,21 @@
 [
     {
         "category":"men",
-        "menu_name":"남성"
+        "menu_name":"남성",
+        "image":"https://cdn.pixabay.com/photo/2015/03/26/09/54/person-690547_960_720.jpg",
+        "description":"남성상의 및 남성의류"
     },
     {
         "category":"women",
-        "menu_name":"여성"
+        "menu_name":"여성",
+        "image":"https://cdn.pixabay.com/photo/2017/08/01/11/48/woman-2564660_960_720.jpg",
+        "description":"주얼리 및 여성의류"
     },
     {
         "category":"baby",
-        "menu_name":"유아"
+        "menu_name":"유아",
+        "image":"https://cdn.pixabay.com/photo/2014/07/11/22/05/baby-390555_960_720.jpg",
+        "description":"영유아 아동의류"
     }
 
 ]

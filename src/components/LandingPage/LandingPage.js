@@ -1,31 +1,36 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import category from '../../dummy/category/menu_category.json';
-import { Layout, Row, Col } from 'antd';
-
-const { Content } = Layout;
+import { Row, Col } from 'antd';
+import './Landing.css'
 
 const LandingPage = () => {
+    const [Categorys, setCategorys] = useState([]);
+
+    useEffect(() => {
+        setCategorys(category)
+    }, [])
     return (
-        <Layout className="layout">
-            <Content style={{ padding: '0 50px' }}>
-                <div className="site-card-wrapper">
-                    <Row gutter={[16, 16]}>
-                        {category.map((item,index)=>{
-                            return <Col key={index} xl={4} lg={6} md={8} xs={24}>
-                                        <div style={{ position: 'relative' }}>
-                                            <a href={`/category/${item.category}`}>
-                                                <img style={{ width: '100%', height: '320px' }} src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" alt="main category" />
-                                            </a>
-                                            <div>
-                                                {item.menu_name}
-                                            </div>
-                                        </div>   
-                                   </Col>})
-                        }
-                    </Row>
-                </div>
-            </Content>
-        </Layout>
+        <div className="site-card-wrapper">
+            {!Categorys?
+            <div>Loading...</div>
+            :
+            <Row gutter={[16, 16]} justify="space-between" align="middle">
+                {category.map((item,index)=>{
+                return <Col key={index} xl={8} lg={8} md={8} xs={24}>
+                            <div className="card-div">
+                                <a href={`/category/${item.category}`}>
+                                    <img style={{ width: '100%', height: '400px' }} src={item.image} alt="main category" title={`${item.category}`}/>
+                                </a>
+                                <div className="card-info">
+                                    <h1>{item.menu_name}</h1>
+                                    <p>{item.description}</p>
+                                </div>
+                            </div>   
+                        </Col>})
+                }
+            </Row>
+            }
+        </div>
     )
 }
 

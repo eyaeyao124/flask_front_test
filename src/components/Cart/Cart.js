@@ -30,7 +30,7 @@ const Cart = () => {
         <div className="cart-wrapper">
             {
                 (!CartList || CartList.length === 0)?
-                <div>장바구니가 비었습니다</div>
+                <div className="empty-msg">장바구니가 비었습니다 :(</div>
                 :CartList.map((item, index)=>{
                     return  <div key={index}>
                                 <Row gutter={[16, 16]} justify="center" align="middle">

@@ -35,7 +35,7 @@ const Detail = ({match}) => {
             );
 
             if(valueCompare !== -1){
-                alert('이미 추가된 상품입니다.')
+                alert('이미 추가된 상품입니다.');
             }else{
                 const addInfo = [...localInfo,itemInfo]
                 localStorage.setItem('cart', JSON.stringify(addInfo));
@@ -45,6 +45,26 @@ const Detail = ({match}) => {
         }else{
             const itemInfo = [{...Item[0],...{"count":Count}}];
             localStorage.setItem('cart', JSON.stringify(itemInfo));
+            history.push("/cart");
+        }
+    }
+
+    const order = () => {
+        if(localStorage.getItem('cart')) {
+            const localInfo = JSON.parse(localStorage.getItem('cart'));
+            const valueCompare = localInfo.findIndex(
+                item => item.id === Item[0].id && item.categoty ===  Item[0].categoty  
+            );
+
+            if(valueCompare !== -1){
+                alert('장바구니에 이미 추가된 상품입니다.');
+                history.push("/cart");
+            }else{
+                alert(`총 주문금액 ${TotalPrice}으로 주문 처리 되었습니다.`);
+            }
+            
+        }else{
+            alert(`총 주문금액 ${TotalPrice}으로 주문 처리 되었습니다.`);
         }
     }
     
@@ -83,7 +103,7 @@ const Detail = ({match}) => {
                                     <div className="price-wrapper"><span>금액</span> <span>{TotalPrice} 원</span></div>
                                     <div className="submit-btn-wrapper">
                                     <Button size="large" onClick={addCart}>장바구니</Button>
-                                    <Button size="large" type="primary">주문하기</Button>
+                                    <Button size="large" type="primary" onClick={order}>주문하기</Button>
                                     </div>
                                 </Col>
                             </Row>

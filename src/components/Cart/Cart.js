@@ -1,9 +1,11 @@
 import React,{useEffect,useState} from 'react';
+import { useHistory } from "react-router-dom";
 import { Button, Image, Row, Col } from 'antd';
 import { DeleteOutlined } from '@ant-design/icons';
 import './Cart.css';
 
 const Cart = () => {
+    const history = useHistory();
     const [CartList, setCartList] = useState([]);
     const [TotalPrice, setTotalPrice] = useState(0);
 
@@ -16,9 +18,17 @@ const Cart = () => {
     }
 
     const totalPrice = () => {
-        const cartItem = JSON.parse(localStorage.getItem('cart'))
-        const totalCost = cartItem.reduce((a, b) => { return a + (b.price*b.count)}, 0)
-        setTotalPrice(totalCost)
+        if(localStorage.getItem('cart')){
+            const cartItem = JSON.parse(localStorage.getItem('cart'))
+            const totalCost = cartItem.reduce((a, b) => { return a + (b.price*b.count)}, 0)
+            setTotalPrice(totalCost)
+        }
+    }
+
+    const order = () => {
+        alert(`모든 상품 ${TotalPrice}으로 상품주문 완료되었습니다.`);
+        localStorage.removeItem('cart');
+        history.push("/");
     }
 
     useEffect(() => {
@@ -60,7 +70,7 @@ const Cart = () => {
             <Row gutter={[16, 16]} justify="center">
                 <Col xs={24} sm={24} md={8} lg={8} xl={4}><div className="total-price">총 주문금액 {TotalPrice}</div></Col>
                 <Col xs={24} sm={24} md={8} lg={8} xl={10}></Col>
-                <Col xs={24} sm={24} md={8} lg={8} xl={4}><Button type="primary" size="large">모두 주문하기</Button></Col>
+                <Col xs={24} sm={24} md={8} lg={8} xl={4}><Button type="primary" size="large" onClick={order}>모두 주문하기</Button></Col>
             </Row>
         </div>
     )

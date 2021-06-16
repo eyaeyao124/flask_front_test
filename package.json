@@ -8,7 +8,6 @@
     "@testing-library/user-event": "^12.8.3",
     "antd": "^4.16.3",
     "axios": "^0.21.1",
-    "gh-pages": "^3.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.4",
@@ -23,9 +22,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build",
-    "predeploy": "npm run build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +41,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "homepage": "https://eyaeyao124.github.io/flask_front_test/"
+  }
 }

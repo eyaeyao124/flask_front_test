@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/eyaeyao124/flask_front_test/static/css/main.cb53b694.chunk.css",
+    "main.js": "/eyaeyao124/flask_front_test/static/js/main.78c1f934.chunk.js",
+    "main.js.map": "/eyaeyao124/flask_front_test/static/js/main.78c1f934.chunk.js.map",
+    "runtime-main.js": "/eyaeyao124/flask_front_test/static/js/runtime-main.e476af10.js",
+    "runtime-main.js.map": "/eyaeyao124/flask_front_test/static/js/runtime-main.e476af10.js.map",
+    "static/css/2.b4e56faa.chunk.css": "/eyaeyao124/flask_front_test/static/css/2.b4e56faa.chunk.css",
+    "static/js/2.df2badf2.chunk.js": "/eyaeyao124/flask_front_test/static/js/2.df2badf2.chunk.js",
+    "static/js/2.df2badf2.chunk.js.map": "/eyaeyao124/flask_front_test/static/js/2.df2badf2.chunk.js.map",
+    "static/js/3.478022f6.chunk.js": "/eyaeyao124/flask_front_test/static/js/3.478022f6.chunk.js",
+    "static/js/3.478022f6.chunk.js.map": "/eyaeyao124/flask_front_test/static/js/3.478022f6.chunk.js.map",
+    "index.html": "/eyaeyao124/flask_front_test/index.html",
+    "static/css/2.b4e56faa.chunk.css.map": "/eyaeyao124/flask_front_test/static/css/2.b4e56faa.chunk.css.map",
+    "static/css/main.cb53b694.chunk.css.map": "/eyaeyao124/flask_front_test/static/css/main.cb53b694.chunk.css.map",
+    "static/js/2.df2badf2.chunk.js.LICENSE.txt": "/eyaeyao124/flask_front_test/static/js/2.df2badf2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e476af10.js",
+    "static/css/2.b4e56faa.chunk.css",
+    "static/js/2.df2badf2.chunk.js",
+    "static/css/main.cb53b694.chunk.css",
+    "static/js/main.78c1f934.chunk.js"
+  ]
+}

@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react';
 import { Button, Image, Row, Col } from 'antd';
 import { DeleteOutlined } from '@ant-design/icons';
+import './Cart.css';
 
 const Cart = () => {
     const [CartList, setCartList] = useState([]);
@@ -26,32 +27,40 @@ const Cart = () => {
     }, [])
 
     return (
-        <div>
+        <div className="cart-wrapper">
             {
                 (!CartList || CartList.length === 0)?
                 <div>장바구니가 비었습니다</div>
                 :CartList.map((item, index)=>{
-                    return  <Row gutter={[16, 16]} key={index}>
-                                <Col xl={6} lg={6} md={12} xs={24}>
-                                    <Image
-                                        width='100%'
-                                        src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                                        />
-                                </Col>
-                                <Col xl={6} lg={6} md={12} xs={24}>
-                                    <div>{item.rate}</div>
-                                    <div>{item.title}</div>
-                                    <div>{item.description}</div>
-                                    <div>{item.price*item.count}</div>
-                                    <div>{item.count}</div>
-                                    <div>{item.date}</div>
-                                    <Button icon={<DeleteOutlined />} onClick={()=>deleteCart(index)}>삭제</Button>
-                                </Col>
-                            </Row>
+                    return  <div key={index}>
+                                <Row gutter={[16, 16]} justify="center" align="middle">
+                                    <Col xs={24} sm={24} md={8} lg={8} xl={4}>
+                                        <Image
+                                            width='100%'
+                                            src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+                                            />
+                                    </Col>
+                                    <Col xs={24} sm={24} md={8} lg={8} xl={10}>
+                                        <div className="cart-title">{item.title}</div>
+                                        <div className="cart-desc"><span>설명</span> {item.description}</div>
+                                        <div className="cart-desc"><span>가격</span> {item.price*item.count}</div>
+                                        <div className="cart-desc"><span>수량</span> {item.count}</div>
+                                        <div className="cart-desc"><span>평가</span> {item.rate}</div>
+                                    </Col>
+                                    <Col xs={24} sm={24} md={8} lg={8} xl={4}>
+                                        <Button icon={<DeleteOutlined />} onClick={()=>deleteCart(index)}>삭제</Button>
+                                    </Col>
+                                </Row>
+                                <br/>
+                            </div>
                 })
             }
-            <div>총 주문금액 {TotalPrice}</div>
-            <Button type="primary">모두 주문하기</Button>
+            <br/>
+            <Row gutter={[16, 16]} justify="center">
+                <Col xs={24} sm={24} md={8} lg={8} xl={4}><div className="total-price">총 주문금액 {TotalPrice}</div></Col>
+                <Col xs={24} sm={24} md={8} lg={8} xl={10}></Col>
+                <Col xs={24} sm={24} md={8} lg={8} xl={4}><Button type="primary" size="large">모두 주문하기</Button></Col>
+            </Row>
         </div>
     )
 }

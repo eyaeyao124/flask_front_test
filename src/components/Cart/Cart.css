@@ -1,0 +1,26 @@
+.cart-wrapper{
+    margin: 50px;
+}
+
+.cart-title{
+    margin-bottom: 20px;
+    padding: 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-desc{
+    margin: 10px 0;
+}
+
+.cart-desc span{
+    color: #aaa;
+    display: inline-block;
+    width: 50px;
+}
+
+.total-price{
+    font-weight: bold;
+    font-size: large;
+}

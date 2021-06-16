@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react';
 import { useHistory } from "react-router-dom";
-import { Button } from 'antd';
+import { Button, Image, Row, Col } from 'antd';
 import { MinusOutlined, PlusOutlined } from '@ant-design/icons';
 
 const Detail = ({match}) => {
@@ -58,25 +58,34 @@ const Detail = ({match}) => {
         <div>
             {
                 Item && Item.map((item, index)=>{
-                    return  <div key={index}>
-                            <div>{item.rate}</div>
-                            <div>{item.title}</div>
-                            <div>{item.description}</div>
-                            <div>{item.price}</div>
-                            <div>{item.date}</div>
-                            </div>
+                    return  <Row gutter={[16, 16]} key={index}>
+                                <Col xl={6} lg={6} md={12} xs={24}>
+                                    <Image
+                                        width='100%'
+                                        src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+                                        />
+                                </Col>
+                                <Col xl={6} lg={6} md={12} xs={24}>
+                                    <div>{item.rate}</div>
+                                    <div>{item.title}</div>
+                                    <div>{item.description}</div>
+                                    <div>{item.price}</div>
+                                    <div>{item.date}</div>
+
+                                    <Button.Group>
+                                        <Button onClick={productDecrease} icon={<MinusOutlined />} />
+                                        <Button onClick={productIncrease} icon={<PlusOutlined />} />
+                                    </Button.Group>
+                                    <div>합계 <span>{Count}</span></div>
+                                    <div>금액 <span>{TotalPrice}</span></div>
+                                    <div>
+                                    <Button onClick={addCart}>장바구니</Button>
+                                    <Button type="primary">주문하기</Button>
+                                    </div>
+                                </Col>
+                            </Row>
                 })
             }
-            <Button.Group>
-                <Button onClick={productDecrease} icon={<MinusOutlined />} />
-                <Button onClick={productIncrease} icon={<PlusOutlined />} />
-            </Button.Group>
-            <div>합계 <span>{Count}</span></div>
-            <div>금액 <span>{TotalPrice}</span></div>
-            <div>
-                <button onClick={addCart}>장바구니 담기</button>
-                <button>주문하기</button>
-            </div>
         </div>
     )
 }

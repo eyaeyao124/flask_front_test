@@ -1,0 +1,22 @@
+.product-title {
+    font-size: large;
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.product-list-wrapper{
+    border: 1px solid #eee;
+}
+
+.product-price{
+    margin: 5px;
+    font-weight: bold;
+}
+
+.product-rate{
+    font-size: small;
+    color: #999;
+    margin: 5px;
+}

@@ -2,6 +2,7 @@ import React,{useEffect,useState} from 'react';
 import { useSelector } from "react-redux";
 import Filter from './Filter';
 import { Row, Col } from 'antd';
+import './ProductList.css'
 
 const ProductList = ({categorys}) => {
     const category = useSelector(state => state.productCategory);
@@ -43,15 +44,15 @@ const ProductList = ({categorys}) => {
                 {
                 List && List.map((item,index)=>{
                     return <Col key={index} xl={4} lg={6} md={8} xs={24}>
-                                <div style={{ position: 'relative' }}>
+                                <div style={{ position: 'relative' }} className="product-list-wrapper">
                                     <a href={`/detail/${categorys}/${item.id}`} >
                                         <img style={{ width: '100%', height: '300px' }} src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" alt="products"/>
                                     </a>
                                     <div>
                                         <div>{item.image}</div>
-                                        <div>{item.title}</div>
-                                        <div>{item.price}</div>
-                                        <div>{item.rate}</div>
+                                        <div className="product-title">{item.title}</div>
+                                        <div className="product-price">{item.price} 원</div>
+                                        <div className="product-rate">평점: {item.rate}</div>
                                     </div>
                                 </div>    
                             </Col>

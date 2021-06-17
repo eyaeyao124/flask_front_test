@@ -75,7 +75,7 @@ const Detail = ({match}) => {
         setBasicPrice(productItem[0].price)
         setTotalPrice(productItem[0].price)
         setSippingPee(2500)
-    }, [])
+    }, [match.params.id,lists])
 
     return (
         <div className="detail-wrapper">

@@ -2,6 +2,10 @@
 
 플라스크 프론트엔드 코딩 테스트 과제입니다.
 
+## 프로젝트 실행 방법
+
+Download zip을 한 뒤 에디터에서 해당 프로젝트를 열어(open folder) 터미널에서 npm install 명령어를 입력후에 npm run start 명령어를 해주시면 됩니다.
+
 ## 사용 기술 및 테스트 환경
 
 -React

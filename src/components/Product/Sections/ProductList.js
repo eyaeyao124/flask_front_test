@@ -18,7 +18,7 @@ const ProductList = ({categorys}) => {
         }else if(name === "rate") {
             setList([...List].sort((a,b)=>{return (b.rate < a.rate)? -1 : (a.rate === b.rate)? 0 : 1}))  
         }else{
-            setList([...List].sort((a,b)=>{return (b.date > a.date)?-1 : ((a.date === b.date)? 0 : 1)}))
+            setList([...List].sort((a,b)=>{return (b.date < a.date)?-1 : ((a.date === b.date)? 0 : 1)}))
         }
     }
 
@@ -27,7 +27,7 @@ const ProductList = ({categorys}) => {
             setList(BasicList.filter(item => item.categoty2.includes(category.selectCategory)))
         }else{
             const lists = require(`../../../dummy/${categorys}/${categorys}.json`);
-            const defaultSort = lists.sort((a,b)=>{return (b.date > a.date)?-1 : ((a.date === b.date)? 0 : 1)})
+            const defaultSort = lists.sort((a,b)=>{return (b.date < a.date)?-1 : ((a.date === b.date)? 0 : 1)})
             setList(defaultSort);
             setBasicList(defaultSort);
         }

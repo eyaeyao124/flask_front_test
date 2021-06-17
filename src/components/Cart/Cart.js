@@ -27,9 +27,13 @@ const Cart = () => {
     }
 
     const order = () => {
-        alert(`모든 상품 ${TotalPrice+SippingPee}으로 상품주문 완료되었습니다.`);
-        localStorage.removeItem('cart');
-        history.push("/");
+        if(!CartList || CartList.length === 0 ){
+            alert('주문할 수 있는 상품이 없습니다.')
+        }else{
+            alert(`모든 상품 ${TotalPrice+SippingPee}으로 상품주문 완료되었습니다.`);
+            localStorage.removeItem('cart');
+            history.push("/");
+        }
     }
 
     useEffect(() => {

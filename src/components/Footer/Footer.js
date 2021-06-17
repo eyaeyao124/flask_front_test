@@ -7,7 +7,7 @@ function Footer() {
             flexDirection: 'column', alignItems: 'center',
             justifyContent: 'center', fontSize:'1rem', backgroundColor:'#eee'
         }}>
-           <p> FLASK FRONT WEB TEST</p>
+           <p> PLASK FRONT WEB TEST</p>
         </div>
     )
 }

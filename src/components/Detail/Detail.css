@@ -64,3 +64,13 @@
     padding: 20px 10px;
     text-align: right;
 }
+
+.shipping-pee{
+    margin: 10px;
+}
+
+.shipping-pee span:last-child{
+    float: right;
+    display: inline-block;
+    font-weight: bold;
+}

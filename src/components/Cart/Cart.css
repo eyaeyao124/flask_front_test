@@ -25,6 +25,11 @@
     font-size: large;
 }
 
+.total-price p{
+    font-size: small;
+    color: #aaa;
+}
+
 .empty-msg{
     margin: 80px;
     text-align: center;

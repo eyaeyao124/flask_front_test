@@ -12,6 +12,7 @@ const Detail = ({match}) => {
     const [Count,setCount] = useState(1);
     const [TotalPrice,setTotalPrice] = useState(0);
     const [BasicPrice,setBasicPrice] = useState(0);
+    const [SippingPee,setSippingPee] = useState(0);
 
     const productIncrease = () => {
         setCount(Count+1)
@@ -60,11 +61,11 @@ const Detail = ({match}) => {
                 alert('장바구니에 이미 추가된 상품입니다.');
                 history.push("/cart");
             }else{
-                alert(`총 주문금액 ${TotalPrice}으로 주문 처리 되었습니다.`);
+                alert(`총 주문금액 ${TotalPrice+SippingPee}으로 주문 처리 되었습니다.`);
             }
             
         }else{
-            alert(`총 주문금액 ${TotalPrice}으로 주문 처리 되었습니다.`);
+            alert(`총 주문금액 ${TotalPrice+SippingPee}으로 주문 처리 되었습니다.`);
         }
     }
     
@@ -73,6 +74,7 @@ const Detail = ({match}) => {
         setItem(productItem)
         setBasicPrice(productItem[0].price)
         setTotalPrice(productItem[0].price)
+        setSippingPee(2500)
     }, [])
 
     return (
@@ -83,7 +85,7 @@ const Detail = ({match}) => {
                                 <Col xl={6} lg={8} md={12} xs={24}>
                                     <Image
                                         width='100%'
-                                        height="300px"
+                                        height="400px"
                                         src={item.image}
                                         />
                                 </Col>
@@ -100,7 +102,8 @@ const Detail = ({match}) => {
                                         <Button onClick={productIncrease} icon={<PlusOutlined />} />
                                     </Button.Group>
                                     </div>
-                                    <div className="price-wrapper"><span>금액</span> <span>{TotalPrice} 원</span></div>
+                                    <div className="price-wrapper"><span>금액</span> <span>{TotalPrice.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")} 원</span></div>
+                                    <div className="shipping-pee"><span>배송비</span> <span>2,500원</span></div>
                                     <div className="submit-btn-wrapper">
                                     <Button size="large" onClick={addCart}>장바구니</Button>
                                     <Button size="large" type="primary" onClick={order}>주문하기</Button>

@@ -8,6 +8,7 @@ const Cart = () => {
     const history = useHistory();
     const [CartList, setCartList] = useState([]);
     const [TotalPrice, setTotalPrice] = useState(0);
+    const [SippingPee,setSippingPee] = useState(0); 
 
     const deleteCart = (index) => {
         let deleteList = JSON.parse(localStorage.getItem('cart'));
@@ -26,13 +27,14 @@ const Cart = () => {
     }
 
     const order = () => {
-        alert(`모든 상품 ${TotalPrice}으로 상품주문 완료되었습니다.`);
+        alert(`모든 상품 ${TotalPrice+SippingPee}으로 상품주문 완료되었습니다.`);
         localStorage.removeItem('cart');
         history.push("/");
     }
 
     useEffect(() => {
         setCartList(JSON.parse(localStorage.getItem('cart')))
+        setSippingPee(2500)
         totalPrice()
     }, [])
 
@@ -54,7 +56,7 @@ const Cart = () => {
                                     <Col xs={24} sm={24} md={8} lg={8} xl={10}>
                                         <div className="cart-title">{item.title}</div>
                                         <div className="cart-desc"><span>설명</span> {item.description}</div>
-                                        <div className="cart-desc"><span>가격</span> {item.price*item.count}</div>
+                                        <div className="cart-desc"><span>가격</span> {(item.price*item.count).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}</div>
                                         <div className="cart-desc"><span>수량</span> {item.count}</div>
                                         <div className="cart-desc"><span>평가</span> {item.rate}</div>
                                     </Col>
@@ -68,7 +70,7 @@ const Cart = () => {
             }
             <br/>
             <Row gutter={[16, 16]} justify="center">
-                <Col xs={24} sm={24} md={8} lg={8} xl={4}><div className="total-price">총 주문금액 {TotalPrice}</div></Col>
+                <Col xs={24} sm={24} md={8} lg={8} xl={4}><div className="total-price">총 주문금액 {TotalPrice.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}<p>(배송비 {SippingPee}원)</p></div></Col>
                 <Col xs={24} sm={24} md={8} lg={8} xl={10}></Col>
                 <Col xs={24} sm={24} md={8} lg={8} xl={4}><Button type="primary" size="large" onClick={order}>모두 주문하기</Button></Col>
             </Row>

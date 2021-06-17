@@ -27,8 +27,9 @@ const ProductList = ({categorys}) => {
             setList(BasicList.filter(item => item.categoty2.includes(category.selectCategory)))
         }else{
             const lists = require(`../../../dummy/${categorys}/${categorys}.json`);
-            setList(lists);
-            setBasicList(lists);
+            const defaultSort = lists.sort((a,b)=>{return (b.date > a.date)?-1 : ((a.date === b.date)? 0 : 1)})
+            setList(defaultSort);
+            setBasicList(defaultSort);
         }
     }
 
@@ -50,7 +51,7 @@ const ProductList = ({categorys}) => {
                                     </a>
                                     <div>
                                         <div className="product-title">{item.title}</div>
-                                        <div className="product-price">{item.price} 원</div>
+                                        <div className="product-price">{item.price.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")} 원</div>
                                         <div className="product-rate">평점: {item.rate}</div>
                                     </div>
                                 </div>    

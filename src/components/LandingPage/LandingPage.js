@@ -11,9 +11,6 @@ const LandingPage = () => {
     }, [])
     return (
         <div className="site-card-wrapper">
-            {!Categorys?
-            <div>Loading...</div>
-            :
             <Row gutter={[16, 16]} justify="center" align="middle">
                 {category.map((item,index)=>{
                 return <Col key={index} xl={8} lg={8} md={8} xs={24}>
@@ -29,7 +26,6 @@ const LandingPage = () => {
                         </Col>})
                 }
             </Row>
-            }
         </div>
     )
 }

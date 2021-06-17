@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# PLASK FRONT WEB TEST
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+플라스크 프론트엔드 코딩 테스트 과제입니다.
 
-## Available Scripts
+## 사용 기술 및 테스트 환경
 
-In the project directory, you can run:
+-React
+-Redux
+-ant design(css 및 반응형 때문에)
 
-### `npm start`
+테스트 환경은 크롬과 엣지에서 테스트 했습니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 페이지별 기술
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 랜딩페이지(HOME)
 
-### `npm test`
+카테고리에 대한 더미 데이터를 만들어 메인 페이지에 대분류 카테고리로 렌더링되도록 구현 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 제품 페이지(소분류 페이지)
 
-### `npm run build`
+대분류 카테고리 선택시 해당 카테고리 값에 맞게 데이터들이 뿌려지며 (category/:category) 기본적으로 제품들은 최신순으로 보여지게 했습니다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+필터는 최신순을 기본으로 높은가격 / 낮은가격 / 평점으로 구현했습니다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+각 대형 카테고리에 맞게 side bar에 제품 카테고리 컴포넌트를 만들어 렌더링 되도록 했으며 해당 카테고리를 클릭시
+클릭한 카테고리 데이터를 리덕스로 관리, 제품리스트 컴포넌트는 카테고리 값대로 제품리스트를 렌더링하도록 했습니다. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+각 제품들 클릭시 제품 상세페이지로 넘어갑니다.
 
-### `npm run eject`
+### 제품 상세 페이지(디테일 페이지)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+제품 클릭시 해당 제품의 대분류 카테고리값 / id값으로 데이터를 불러와 상세 정보들을 뿌려주며
+수량 선택시 해당 수량에 맞게 금액 바로 적용되도록 했습니다.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+장바구니와 주문하기 클릭시 이미 있는 제품이면 경고창으로 이미 있는 제품이라고 띄워주며 없는 제품이면 
+장바구니는 페이지로 넘어가고 주문하기는 현재 수량대로 제품이 주문되었다라는 얼럿창만 띄워줍니다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 장바구니 페이지
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+장바구니 데이터들은 로컬 스토리지를 이용했으며 제품 상세 페이지의 제품데이터와 수량값들을 저장해 수량이 적용된 값들로
+데이터들이 렌더링 되며 삭제버튼 클릭시 해당 제품이 삭제되며 해당 아이디의 로컬 스토리지 값들도 삭제됩니다.
 
-## Learn More
+모두 주문하기를 클릭시 총 주문금액으로 주문되었다라는 메시지와 함께 장바구니의 모든 데이터들을 삭제하면서 메인페이지로
+보내도록 구현했습니다.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 아쉬운 점
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+프론트에서 더미데이터들만 활용했기에 로그인 기능 부재
+- 로그인 기능이 있었다면 장바구니 페이지를 로그인한 사용자들만 보이게 혹은 구매하기 버튼 클릭시 로그인 창으로 리다이렉트 시켰을거 같습니다.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
